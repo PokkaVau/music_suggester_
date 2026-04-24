@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeTunez | Mood-Based Music Recommender</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="default">
+    <div id="app-background" class="bg-default"></div>
+
+    <main class="glass-container">
+        <header>
+            <div class="top-bar">
+                <button id="home-btn" class="home-btn" title="Refresh Page"><i class="fas fa-home"></i></button>
+            </div>
+            <h1 class="neon-text">VibeTunez</h1>
+            <p class="subtitle">Discover music that matches your vibe.</p>
+        </header>
+
+        <section class="mood-selection">
+            <div class="emoji-buttons">
+                <button class="mood-btn" data-mood="happy">😄 Happy</button>
+                <button class="mood-btn" data-mood="sad">😢 Sad</button>
+                <button class="mood-btn" data-mood="chill">😌 Chill</button>
+                <button class="mood-btn" data-mood="angry">😡 Angry</button>
+            </div>
+            <div class="text-input-container">
+                <input type="text" id="mood-input" placeholder="Or type how you feel (e.g. 'I feel lonely')...">
+            </div>
+        </section>
+
+        <section id="status-container" class="hidden">
+            <div class="loader">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <p id="status-text">Finding the perfect tracks...</p>
+        </section>
+
+        <section class="results-section">
+            <h2 id="results-title" class="hidden">Recommended For You</h2>
+            <div id="video-grid" class="video-grid">
+                <!-- Video cards will be injected here -->
+            </div>
+        </section>
+        <section class="favorites-section">
+            <h2>Your Favorites ❤️</h2>
+            <div id="favorites-grid" class="video-grid">
+                <!-- Favorites will be injected here -->
+            </div>
+            <p id="no-favorites-msg" class="subtitle">You haven't saved any tracks yet.</p>
+        </section>
+    </main>
+
+    <footer class="app-footer glass-container">
+        <p>Connect with me</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/PokkaVau" target="_blank" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/md-zayed-iqbal-372852254/" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/PokkaVau" target="_blank" class="social-btn github"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="utils.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
